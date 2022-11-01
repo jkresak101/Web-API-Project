@@ -62,7 +62,7 @@ namespace WebAPIProject.Controllers
         // POST:
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Strength,Speed,Age,Level,Equipment Id")] Character character)
+        public async Task<IActionResult> Create([Bind("Id,Name,Strength,Speed,Age,Level,EquipmentId")] Character character)
         {
             character.Id = null;
             var resultPost = await client.PostAsync<Character>(requestUri, character, new JsonMediaTypeFormatter());

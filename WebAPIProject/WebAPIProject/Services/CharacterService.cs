@@ -8,7 +8,7 @@ namespace WebAPIProject.Services
     public class CharacterService : ICharacterInterface
     {
         private readonly HttpClient _client;
-        public const string BasePath = "/api/Character/";
+        public const string BasePath = "/api/Characters/";
 
         public CharacterService(HttpClient client)
         {

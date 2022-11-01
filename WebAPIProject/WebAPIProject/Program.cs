@@ -1,7 +1,7 @@
 using WebAPIProject.Services;
 using WebAPIProject.Services.Interfaces.WebMVC_API_Client.Services.Interfaces;
 
-namespace WebMVC_API_Client
+namespace WebAPIProject
 {
     public class Program
     {
@@ -15,7 +15,7 @@ namespace WebMVC_API_Client
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddHttpClient<ICharacterInterface, CharacterService>(c =>
-            c.BaseAddress = new Uri("https://localhost:7256/"));
+            c.BaseAddress = new Uri("https://localhost:7183/api/Characters/"));
 
             var app = builder.Build();
 
